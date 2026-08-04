@@ -4,7 +4,7 @@ Our paper ***SCALE*** has been accepted by ECCV2026. 🎉🧨
 ## Overview
 
 <p align="center">
-  <img src="./assets/overview.pdf" width="100%"/>
+  <img src="./assets/overview.png" width="100%"/>
 </p>
 
 **Official implementation of SCALE (Semantic‑Calibrated Guidance Enhancement)**, a training‑free guidance mechanism for text‑to‑image diffusion models that improves prompt faithfulness while preserving visual quality, introduced in the paper “SCALE: Semantic‑Calibrated Guidance Enhancement”, accepted to ECCV 2026.
@@ -24,9 +24,9 @@ SCALE achieves state-of-the-art performance on DrawBench, GenEval, and T2I-CompB
 Ensuring prompt faithfulness remains a central challenge for text-to-image diffusion models.
 Classifier-Free Guidance (CFG) improves prompt adherence but exhibits an inherent quality--alignment tension:
 increasing the guidance scale to strengthen conditioning on the prompt often degrades visual quality and introduces artifacts.
-To probe the limit of alignment maximization, we first introduce $$\textbf{SAP}$$ ($$\textbf{S}$$emantic $$\textbf{A}$$lignment $$\textbf{P}$$rojection), a greedy update rule that projects each sampling update onto the guidance direction to maximize per-step alignment progress.
+To probe the limit of alignment maximization, we first introduce **SAP** (**S**emantic **A**lignment **P**rojection), a greedy update rule that projects each sampling update onto the guidance direction to maximize per-step alignment progress.
 We then show that SAP can fail due to the loss of orthogonal corrective freedom, discarding high-dimensional components that are crucial for rectifying accumulated trajectory drift.
-Based on this diagnosis, we propose $$\textbf{SCALE}$$ ($$\textbf{S}$$emantic-$$\textbf{CAL}$$ibrated Guidance $$\textbf{E}$$nhancement), a drop-in, training-free guidance mechanism.
+Based on this diagnosis, we propose **SCALE** (**S**emantic-**CAL**ibrated Guidance **E**nhancement), a drop-in, training-free guidance mechanism.
 SCALE improves semantic alignment while preserving structural fidelity by selectively amplifying the semantic component along the guidance direction while preserving the orthogonal component to retain corrective degrees of freedom.
 Across multiple text-to-image benchmarks, SCALE delivers remarkable and consistent gains in prompt adherence and compositional alignment with negligible runtime overhead over standard sampling.
 
